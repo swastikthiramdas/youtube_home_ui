@@ -14,7 +14,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
   List<VideoModel> items = [
     VideoModel(
       "https://imgs.search.brave.com/Rm-fSg8gaRKQWUYTalzT9s7-RfGbK6eSclIaRmPCTx4/rs:fit:948:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC40/M1VGbV9xOGlteE9i/OVBjNFlhZjZBSGFE/dCZwaWQ9QXBp",
@@ -88,8 +87,8 @@ class _HomePageState extends State<HomePage> {
             Padding(
               padding: EdgeInsets.all(10),
               child: CircleAvatar(
-                backgroundImage: NetworkImage("https://firebasestorage.googleapis.com/v0/b/blog-app-b1755.appspot.com/o/IMG.jpg?alt=media&token=6eb97b64-add6-478f-a6e3-eea992c5ef2a")
-              ),
+                  backgroundImage: NetworkImage(
+                      "https://firebasestorage.googleapis.com/v0/b/blog-app-b1755.appspot.com/o/IMG.jpg?alt=media&token=6eb97b64-add6-478f-a6e3-eea992c5ef2a")),
             )
           ],
         ),
@@ -146,13 +145,16 @@ class _HomePageState extends State<HomePage> {
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.currency_lira), label: "Shorts"),
+              icon: Icon(Icons.currency_lira),
+              label: "Shorts",
+            ),
             BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.add_circle_outline,
-                  size: 48,
-                ),
-                label: ""),
+              icon: Icon(
+                Icons.add_circle_outline,
+                size: 48,
+              ),
+              label: "",
+            ),
             BottomNavigationBarItem(
                 icon: Icon(Icons.subscriptions), label: "Subscriptions"),
             BottomNavigationBarItem(
